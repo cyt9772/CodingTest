@@ -4,3 +4,8 @@ venv/
 debug/
 .idea/
 .vs/
+CodingTest.sln
+CodingTest.vcxproj
+CodingTest.vcxproj.filters
+CodingTest.vcxproj.user
+
