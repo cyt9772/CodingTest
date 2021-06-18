@@ -1,3 +1,6 @@
 ## ignore foler
 test.py
 venv/
+debug/
+.idea/
+.vs/
