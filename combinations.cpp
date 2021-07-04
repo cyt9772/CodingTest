@@ -12,6 +12,7 @@ void combination(vector<char> arr, vector<char> comb, int r, int index, int dept
 			cout << comb[i] << ' ';
 		}
 		cout << endl;
+		return;
 	}
 	else if (depth == arr.size()) {
 		return;
@@ -25,10 +26,10 @@ void combination(vector<char> arr, vector<char> comb, int r, int index, int dept
 
 };
 
-int Combination() {
+int CombinationTest() {
 	vector<char> vec = { 'a', 'b','c','d','e' };
 
-	int r = 2;
+	int r = 5;
 	vector<char> comb(r);
 
 	combination(vec, comb, r, 0, 0);
