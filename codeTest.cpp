@@ -39,13 +39,27 @@ extern int P10971();
 extern int P6603();
 extern int P11723();
 extern int P1182();
+extern int P14391();
+extern int P11726();
+extern int P11727();
+extern int P11052();
+extern int P16194();
+extern int P15990();
+extern int P1463();
 extern int CombinationTest();
 
 
 int main() {
+    P15990();
     //test();
     //CombinationTest();
-        P1182();
+    //  P1182();
+    //   P14391();
+    //P1463();
+    //  P11726();
+    //  P16194();
+    //  P11052();
+    //  P11727();
     //P11723();
     //P6603();
     //P10971();
