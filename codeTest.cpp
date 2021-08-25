@@ -1,3 +1,10 @@
+#include<iostream>
+#include <cstring>
+#include <string>
+#include <vector>
+#include <queue>
+
+using namespace std;
 
 //void P_17427();
 extern int P1107();
@@ -58,6 +65,7 @@ extern int P13023();
 extern int P13398();
 extern int P13913();
 extern int P14002();
+extern int P14226(int param);
 extern int P14391();
 extern int P14500();
 extern int P14501();
@@ -79,8 +87,12 @@ extern int P18290();
 extern int CombinationTest();
 
 
-int main() {
-    P13913();
+int main(int argc, char** argv) {
+    int param = 0;
+    param=stoi(argv[1]);
+   cout << param << endl;
+    P14226(param);
+    //P13913();
     //P1697();
     //P7562();
     //P7576();
