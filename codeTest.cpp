@@ -66,7 +66,7 @@ extern int P13023();
 extern int P13398();
 extern int P13913();
 extern int P14002();
-extern int P14226(int param);
+extern int P14226();
 extern int P14391();
 extern int P14500();
 extern int P14501();
