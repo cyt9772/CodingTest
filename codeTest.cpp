@@ -83,14 +83,16 @@ extern int P15661();
 extern int P15988();
 extern int P15990();
 extern int P16194();
+extern int P16935();
 extern void P_17425();
 extern int P18290();
 extern int CombinationTest();
 
 
 int main() {
-    P1261();
-    P14226();
+    P16935();
+    //P1261();
+    //P14226();
     //P13913();
     //P1697();
     //P7562();
