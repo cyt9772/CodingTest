@@ -6,6 +6,7 @@ extern int P1149();
 extern int P1182();
 extern int P1248();
 extern int P1260();
+extern int P1261();
 extern int P1309();
 extern int P1463();
 extern int P1476_1();
@@ -80,7 +81,8 @@ extern int CombinationTest();
 
 
 int main() {
-    P13913();
+    P1261();
+    //P13913();
     //P1697();
     //P7562();
     //P7576();
