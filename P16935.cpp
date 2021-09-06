@@ -85,8 +85,8 @@ void oper6(int row, int col) {
 	}
 }
 
-int P16935() {
-	int n, m, opcnt; //¹è¿­ Å©±â, operation °³¼ö
+int main() {
+	int n, m, opcnt; //ï¿½è¿­ Å©ï¿½ï¿½, operation ï¿½ï¿½ï¿½ï¿½
 
 	cin >> n >> m >> opcnt;
 

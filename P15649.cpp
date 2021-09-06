@@ -12,7 +12,8 @@ bool c_15649[10]; int a_15649[10];
 
 int go_15649(int index, int n, int m) {
 	if (index == m) {
-		//Ãâ·Â
+		//ï¿½ï¿½ï¿½
+		for (int i = 0; i < m; i++)
 		for (int i = 0; i < m; i++)
 			printf("%d ", a_15649[i]);
 		printf("\n");
@@ -27,7 +28,7 @@ int go_15649(int index, int n, int m) {
 	return 0;
 };
 
-/* ÀüÃ¼ N°³ Áß¿¡¼­ M°³¸¦ ¼±ÅÃÇÏ´Â ¹æ¹ý*/
+/* ï¿½ï¿½Ã¼ Nï¿½ï¿½ ï¿½ß¿ï¿½ï¿½ï¿½ Mï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½*/
 int P15649() {
 	int n, m;
 	cin >> n >> m;

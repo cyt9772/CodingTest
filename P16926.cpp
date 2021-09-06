@@ -16,25 +16,25 @@ int P16926() {
 	}
 
 	vector<vector<int>> groups;
-	//groupÀÇ °³¼ö ±¸ÇÏ±â
+	//groupï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 	int groupn = min(m, n) / 2;
 
-	//ÀÏÂ÷¿ø ¹è¿­·Î ¹Ù²Ù±â
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½Ù²Ù±ï¿½
 	for (int k = 0; k < groupn; k++) {
 		vector<int> group;
-		for (int i = k+1; i <= m - k-1; i++) { //»ó´Ü °¡·Î
+		for (int i = k+1; i <= m - k-1; i++) { //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			group.push_back(map16926[k+1][i]);
 		}
 
-		for (int i = k + 1; i <= n - k - 1; i++) {  //¿À¸¥ÂÊ ¼¼·Î
+		for (int i = k + 1; i <= n - k - 1; i++) {  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			group.push_back(map16926[i][m-k]);
 		}
 
-		for (int i = m-k; i > k + 1; i--) {  //ÇÏ´Ü °¡·Î
+		for (int i = m-k; i > k + 1; i--) {  //ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
 			group.push_back(map16926[n-k][i]);
 		}
 
-		for (int i = n - k; i > k + 1; i--) {  //¿ÞÂÊ °¡·Î
+		for (int i = n - k; i > k + 1; i--) {  //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			group.push_back(map16926[i][k+1]);
 		}
 		groups.push_back(group);
@@ -47,19 +47,19 @@ int P16926() {
 		int len = group.size();
 		int index = r % len;
 
-		for (int i = k + 1; i <= m - k - 1; i++, index=(index+1)%len) { //»ó´Ü °¡·Î
+		for (int i = k + 1; i <= m - k - 1; i++, index=(index+1)%len) { //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			map16926[k + 1][i] = group[index];
 		}
 
-		for (int i = k + 1; i <= n - k - 1; i++,  index = (index + 1) % len) {  //¿À¸¥ÂÊ ¼¼·Î
+		for (int i = k + 1; i <= n - k - 1; i++,  index = (index + 1) % len) {  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			map16926[i][m - k]=group[index];
 		}
 
-		for (int i = m - k; i > k + 1; i--, index = (index + 1) % len) {  //ÇÏ´Ü °¡·Î
+		for (int i = m - k; i > k + 1; i--, index = (index + 1) % len) {  //ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
 			map16926[n - k][i]=group[index];
 		}
 
-		for (int i = n - k; i > k + 1; i--, index = (index + 1) % len) {  //¿ÞÂÊ °¡·Î
+		for (int i = n - k; i > k + 1; i--, index = (index + 1) % len) {  //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			map16926[i][k + 1]=group[index];
 		}
 	}
