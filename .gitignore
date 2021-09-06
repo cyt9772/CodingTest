@@ -8,4 +8,4 @@ CodingTest.sln
 CodingTest.vcxproj
 CodingTest.vcxproj.filters
 CodingTest.vcxproj.user
-
+*.dSYM
