@@ -9,9 +9,7 @@ public:
     Rectangle(USHORT width, USHORT height);
     ~Rectangle(){}
 
-    //overload
-    void DrawShape() const;
-    void DrawShape(USHORT aWidth, USHORT aHeight) const;
+    void DrawShape(USHORT aWidth, USHORT aHeight, BOOL userCurrentVals=FALSE) const;
 private:
     USHORT itsWidth;
     USHORT itsHeight;
@@ -22,14 +20,21 @@ Rectangle::Rectangle(USHORT width, USHORT height){
     itsHeight=height;
 }
 
-void Rectangle::DrawShape() const {
-    DrawShape(itsWidth, itsHeight);
-}
-
-void Rectangle::DrawShape(USHORT width, USHORT height) const{
-    for(USHORT i=0;i<height;i++)
+void Rectangle::DrawShape(USHORT width, USHORT height, BOOL userCurrentVals) const{
+    int printWidth;
+    int printHeight;
+    
+    if(userCurrentVals==TRUE)
     {
-        for(USHORT j=0;j<width;j++)
+        printWidth=itsWidth;
+        printHeight=itsHeight;
+    }else{
+        printWidth=width;
+        printHeight=height;
+    }
+    for(USHORT i=0;i<printHeight;i++)
+    {
+        for(USHORT j=0;j<printWidth;j++)
         {
             cout<<"*";
         }
@@ -39,8 +44,8 @@ void Rectangle::DrawShape(USHORT width, USHORT height) const{
 
 int main(){
     Rectangle theRect(30,5);
-    cout<<"DrawShape(): \n";
-    theRect.DrawShape();
+    cout<<"DrawShape(0,0,TRUE): \n";
+    theRect.DrawShape(0,0,TRUE);
     cout<<"\nDrawShape(40,2): \n";
     theRect.DrawShape(40,2);
 
