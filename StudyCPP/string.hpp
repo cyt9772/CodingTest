@@ -43,7 +43,6 @@ String::String()
 // required size. Null filled.
 String::String(unsigned short len)
 {
-    cout<<"Call String(unsigned short len)\n";
     itsString = new char[len+1];
     for (unsigned short i = 0; i<=len; i++)
         itsString[i] = '\0';
@@ -55,7 +54,6 @@ String::String(unsigned short len)
 // Converts a character array to a String
 String::String(const char * const cString)
 {
-    cout<<"Call String(const char * const cString)\n";
     itsLen = strlen(cString);
     itsString = new char[itsLen+1];
     for (unsigned short i = 0; i<itsLen; i++)
@@ -67,7 +65,6 @@ String::String(const char * const cString)
 // copy constructor
 String::String (const String & rhs)
 {
-    cout<<"Call String (const String & rhs)\n";
     itsLen=rhs.GetLen();
     itsString = new char[itsLen+1];
     for (unsigned short i = 0; i<itsLen;i++)
@@ -89,7 +86,6 @@ String::~String ()
 // then copies string and size
 String& String::operator=(const String & rhs)
 {
-    cout<<"Call operator=(const String & rhs)\n";
     if (this == &rhs)
         return *this;
 
@@ -110,7 +106,6 @@ String& String::operator=(const String & rhs)
 // changed!
 char & String::operator[](unsigned short offset)
 {
-    cout<<"Call operator[](unsigned short offset)\n";
     if (offset > itsLen)
         return itsString[itsLen-1];
     else
@@ -122,7 +117,6 @@ char & String::operator[](unsigned short offset)
 // on const objects (see copy constructor!)
 char String::operator[](unsigned short offset) const
 {
-    cout<<"Call operator[](unsigned short offset) const\n";
     if (offset > itsLen)
         return itsString[itsLen-1];
     else
@@ -134,7 +128,6 @@ char String::operator[](unsigned short offset) const
 // string to rhs
 String String::operator+(const String& rhs)
 {
-    cout<<"Call operator+(const String& rhs)\n";
     unsigned short  totalLen = itsLen + rhs.GetLen();
     String temp(totalLen);
 
@@ -154,7 +147,6 @@ String String::operator+(const String& rhs)
 // changes current string, returns nothing
 void String::operator+=(const String& rhs)
 {
-    cout<<"Call operator+=(const String& rhs)\n";
     unsigned short rhsLen = rhs.GetLen();
     unsigned short totalLen = itsLen + rhsLen;
     String  temp(totalLen);
