@@ -31,6 +31,26 @@ Node::~Node(){
 }
 
 void Node::Insert(Node* newNode){
-    
+    if(!itsNext) //null이면
+        itsNext=newNode;
+    else{ //null이 아니면
+        int NextCatsAge=itsNext->GetCat()->GetAge();
+        int NewAge=newNode->GetCat()->GetAge();
+        int ThisNodeAge=itsCat->GetAge();
+
+        if(NewAge>ThisNodeAge && NewAge<NextCatsAge){
+            newNode->SetNext(itsNext);
+            itsNext=newNode;
+        }else
+            itsNext->Insert(newNode);
+    }    
 }
 
+void Node::Display(){
+    if(itsCat->GetAge()>0){
+        cout<<"My cat is ";
+        cout<<itsCat->GetAge()<<" years old\n";
+    }
+    if(itsNext)
+        itsNext->Display();
+}
