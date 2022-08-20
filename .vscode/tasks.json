@@ -11,6 +11,7 @@
             "label": "Learn C++",
             "command": "g++",
             "args": [
+                "-g",
                 "${file}",
                 "-o",
                 "${fileDirname}/test"
@@ -64,8 +65,28 @@
             "group": "test",
             "args": [
                 "/ C",
-                "$ {workspaceRoot} / $ {fileBasenameNoExtension}"
+                "$ {workspaceRoot} / test.exe"
             ]
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: 디버그 모드",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "컴파일러: C:\\MinGW\\bin\\g++.exe"
         }
     ]
 }

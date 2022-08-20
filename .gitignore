@@ -10,4 +10,4 @@ CodingTest.vcxproj.filters
 CodingTest.vcxproj.user
 *.dSYM
 ./*/test.exe
-./.vscode/*
+.vscode/*
